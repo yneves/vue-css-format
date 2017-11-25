@@ -112,6 +112,10 @@ function format (data, syntax) {
         require('postcss-format-less-mixins')
       ]).process(result.css, {
         syntax: require('postcss-less')
+      }).then((result) => {
+        // remove dirty line breaks
+        result.css = result.css.replace(/\r\n/g, '\n')
+        return result
       }).then(resolve).catch(reject)
     }).catch(reject)
   })
