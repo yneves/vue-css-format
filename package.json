@@ -1,6 +1,6 @@
 {
   "name": "vue-less-format",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "vue-less-format is a tool that automatically format your less code inside vue files",
   "main": "index.js",
   "scripts": {
