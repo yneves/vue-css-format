@@ -107,7 +107,13 @@ function format (data, syntax) {
   return new Promise((resolve, reject) => {
     postcss([stylefmt]).process(data, {
       syntax
-    }).then(resolve).catch(reject)
+    }).then((result) => {
+      postcss([
+        require('postcss-format-less-mixins')
+      ]).process(result.css, {
+        syntax: require('postcss-less')
+      }).then(resolve).catch(reject)
+    }).catch(reject)
   })
 }
 

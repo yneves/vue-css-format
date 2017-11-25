@@ -1,15 +1,15 @@
-##vue-css-format
-> vue-css-format is a tool that automatically format your css code, support css、less、scss and vue
+# vue-less-format
+This is simply [vue-css-format](https://github.com/linrui1994/vue-css-format) and [postcss-format-less-mixins](https://github.com/frontendauteur/postcss-format-less-mixins) put together.
 
-#### usage
+# usage
 - install
 ```shell
-npm install vue-css-format --save-dev
+npm install vue-less-format --save-dev
 ```
 
 - write the following js file
 ```javascript
-var format = require('vue-css-format');
+var format = require('vue-less-format');
 var path = require('path')
 
 format(path.resolve()) // the directory want to format
@@ -19,28 +19,6 @@ format(path.resolve()) // the directory want to format
 ```shell
 node index.js
 ```
-
-#### case
-> input 
-```css
-a {
-    height: 10px;
-    b{height:10px;}
-}
-```
-> ouput
-```css
-a {
-    height: 10px;
-
-    b {
-        height: 10px;
-    }
-}
-```
-
-#### feature
-- base on [stylefmt](https://github.com/morishitter/stylefmt) that can work with [stylelint](https://stylelint.io/)
 
 ### License
 The MIT License
