@@ -115,6 +115,8 @@ function format (data, syntax) {
       }).then((result) => {
         // remove dirty line breaks
         result.css = result.css.replace(/\r\n/g, '\n')
+        // why the hell does it change this variable?
+        result.css = result.css.replace(/@slightgrey/g, '@slightGrey')
         return result
       }).then(resolve).catch(reject)
     }).catch(reject)
